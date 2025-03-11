@@ -33,7 +33,7 @@ sh build.sh  # Windows（使用 Git Bash）
 sh run.sh  # Windows（使用 Git Bash）
 
 ### 手動執行（若不使用 `run.sh`）
-python3 presentation.py or python presentation.py
+python3 presentation.py 
 
 ---
 
