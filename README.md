@@ -8,7 +8,7 @@
 請確保您的環境符合以下條件：
 
 - **Python 版本**：Python 3.12+
-- **作業系統**：macOS 
+- **作業系統**：macOS / Windows（已測試）
 
 ### 確認 Python 版本
 python --version
@@ -23,16 +23,18 @@ cd 2025-cloud-native-hw1
 
 ### 執行建置（格式化程式碼 & 檢查）
 ./build.sh  # Linux/macOS
-
+sh build.sh  # Windows（使用 Git Bash）
 
 ---
 
 ## Running the Application（執行專案）
 ###  執行 CLI 應用程式
 ./run.sh  # Linux/macOS
+sh run.sh  # Windows（使用 Git Bash）
 
 ### 手動執行（若不使用 `run.sh`）
-python3 presentation.py 
+python3 presentation.py or python presentation.py
+
 ---
 
 ## Features（功能列表）
