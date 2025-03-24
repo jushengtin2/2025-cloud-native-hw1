@@ -37,4 +37,16 @@ class Database:
         return "\n".join(self.listings[l].to_string() for l in sorted(self.categories[category], reverse=True)) 
 
     def get_top_category(self):
-        return max(self.categories, key=lambda cat: (len(self.categories[cat]), cat), default="Error - no categories available") #降冪 比如s比e大
+        if not self.categories:
+            return ["Error - no categories available"]
+        
+        # Step 1: 找出最大 listing 數量
+        max_count = max(len(lst) for lst in self.categories.values())
+        
+        # Step 2: 收集所有擁有最多 listings 的 category
+        top_categories = [cat for cat, lst in self.categories.items() if len(lst) == max_count]
+        
+        # Step 3: 按照 lexicographical order 排序
+        top_categories.sort()
+        
+        return " ".join(top_categories)
